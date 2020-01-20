@@ -1,0 +1,180 @@
+.todo {
+    position: absolute;
+    height: 100%;
+    width: 500px;
+    background: #fff9c4;
+    display: block;
+    overflow: scroll;
+    left: 0;
+}
+
+
+/******       **/
+
+.panel {
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    right: 0;
+    display: none;
+    background-color: #1a237e;
+    padding: 0px 15px;
+    color: white;
+    box-sizing: border-box;
+    border-left: 10px solid #000051;
+    border-radius: 15px 0px 0px 0px;
+    transition: all ease-in 0.2s;
+}
+
+.input-container {
+    margin: 15px 0px;
+}
+
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#task {
+    height: 100px;
+    width: 100%;
+    background-color: #000051;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    outline: none;
+    appearance: none;
+}
+
+h3 {
+    text-rendering: optimizeLegibility;
+}
+
+#priority,
+#deadline,
+#submit-btn {
+    display: block;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-size: 14px;
+    background-color: #000051;
+    color: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#submit-btn {
+    cursor: pointer;
+}
+
+.todo ul {
+    width: 100%;
+    padding: 0;
+}
+
+li.task {
+    list-style-type: none;
+    border-bottom: 1px solid #cbc693;
+    box-sizing: border-box;
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-size: 13px;
+    color: #424242;
+}
+
+.actions>button {
+    -webkit-appearance: button;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    background-color: buttonface;
+    box-sizing: border-box;
+    margin: 0em;
+    font: 400 11px system-ui;
+    padding: 1px 7px 2px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
+    border-image: initial;
+}
+
+li.task .info,
+li.task .actions {
+    display: inline-block;
+}
+
+button.new-task {
+    font-size: 16px;
+    background-color: yellowgreen;
+    outline: none;
+    cursor: pointer;
+}
+
+
+/** checkbox styles **/
+
+.v-check {
+    position: absolute;
+    opacity: 0;
+}
+
+.v-check+label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+}
+
+.v-check+label:before {
+    content: '';
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 20px;
+    height: 20px;
+    background: white;
+    transition: all ease-in 0.2s;
+}
+
+.v-check:hover+label:before {
+    background: #002f6c;
+}
+
+.v-check+label:before {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+}
+
+.v-check:checked+label:before {
+    background: #002f6c;
+}
+
+.v-check:checked+label:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 9px;
+    background: white;
+    width: 2px;
+    height: 2px;
+    box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}

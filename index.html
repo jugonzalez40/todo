@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="todo">
+        <ul id="tasks-container">
+        </ul>
+        <button class='new-task' id='add-btn'> Add New Task +</button>
+    </div>
+
+    <div class="panel" id='panel'>
+        <h3>Task</h3>
+
+        <form id="form">
+            <div class="input-container">
+                <textarea name="task" id="task"></textarea>
+            </div>
+
+            <div class="input-container">
+                <h3> Priority Level </h3>
+                <select name="priority" id="priority">
+                    <option >Low</option>
+                    <option >Medium</option>
+                    <option >High</option>
+                </select>
+            </div>
+
+            <div class="input-container">
+                <h3> Deadline </h3>
+                <input type="date" name="deadline" id="deadline">
+            </div>
+
+
+            <button id="submit-btn" type="submit"> Save </button>
+
+        </form>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
